@@ -1,0 +1,113 @@
+.waxom-ideas {
+  padding-top: 50px;
+  text-align: center;
+  background-color: #fbfaf8;
+
+   #carousel {
+     width:100%;
+     height: 200px;
+     position:relative;
+     clear:both;
+     overflow:hidden;
+   }
+
+   #carousel img {
+     visibility:hidden; /* hide images until carousel can handle them */
+     cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+   }
+
+   .split-left {
+     width: 63%;
+     float:left;
+   }
+   .split-right {
+     width: 63%;
+     float:left;
+    //  margin-left:10px;
+   }
+}
+
+.waxon-ideas__header {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "RalewayBold", Arial, sans-serif;
+  font-size: 18px;
+  color: #5B554A;
+}
+
+.waxon-ideas__descr {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "MotseratLight", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #948977;
+}
+
+
+@media (min-width: 500px) {
+
+  .waxom-ideas {
+
+    #carousel {
+      height: 250px;
+    }
+  }
+
+}
+
+@media (min-width: @screen-sm) {
+
+  .waxom-ideas {
+    padding-top: 50px;
+
+    #carousel {
+      height: 300px;
+    }
+  }
+
+  .waxon-ideas__header {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .waxon-ideas__descr {
+    margin-bottom: 40px;  ;
+  }
+
+}
+
+@media (min-width: @screen-md) {
+
+  .waxom-ideas {
+    padding-top: 80px;
+
+    #carousel {
+      height: 390px;
+    }
+  }
+
+  .waxon-ideas__header {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+
+  .waxon-ideas__descr {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: @screen-lg) {
+
+  .waxom-ideas {
+
+    #carousel {
+      height: 470px;
+    }
+  }
+
+  .waxon-ideas__header {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,90 @@
+.counters {
+  padding: 50px 0 40px 0;
+  background-color: #281F1C;
+  
+}
+
+.counters__item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #c7b299;
+  fill: #c7b299;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    margin-left: -15px;
+    background-color: #fff;
+  }
+
+}
+
+.icon-counters {
+  height: 44px;
+  margin-bottom: 20px;
+}
+
+.icon-clients {
+  width: 44px;
+}
+
+.icon-coffee {
+	width: 48px;
+}
+
+.icon-post {
+	width: 44px;
+}
+
+.icon-like {
+	width: 44px;
+}
+
+.icon-launch {
+	width: 54px;
+}
+
+.counter__reading {
+  margin: 0;
+  font-family: "MontserratLight", Arial, sans-serif;
+  font-size: 38px;
+  line-height: 36px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.counter__name {
+  margin: 0;
+  font-family: "MontserratLight", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #c7b299;
+}
+
+@media (min-width: @screen-sm) {
+
+  .counters__item {
+    margin-bottom: 0;
+  }
+
+  .counter__reading {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .counter__name {
+    font-size: 14px;
+  }
+
+}

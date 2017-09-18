@@ -1,0 +1,129 @@
+.main-header {
+  background: #4d3524 url("@{img-folder}header-bg.jpg") no-repeat;
+  background-size: cover;  
+
+  .container {
+    // background: green;
+  }
+}
+
+.logo {
+  width: 63.031px;
+	height: 55.125px;
+  fill: #FFFCDB;
+}
+
+.icon-cart {
+	width: 18px;
+	height: 24px;
+  fill: #FFFCDB;
+
+  &:hover {
+    fill: #C6A87B;
+  }
+
+}
+
+.icon-search {
+	width: 24px;
+	height: 24px;
+  fill: #FFFCDB;
+
+  &:hover {
+    fill: #C6A87B;
+  }
+
+}
+
+.navbar-brand {
+  padding-top: 40px;
+  font-family: "RaleWayRegular", Arial, sans-serif;
+  font-size: 34px;
+  color: #FFFCDB;
+
+  &:hover {
+    color: #C6A87B;
+  }
+
+  &:hover .logo {
+    fill: #C6A87B;
+  }
+}
+
+.navbar-brand span {
+  display: inline-block;
+  position: relative;
+  bottom: 15px;
+}
+
+.navbar-toggle {
+  margin-top: 45px;
+}
+
+.navbar-nav {
+  font-family: "MontserratLight", Arial, sans-serif;
+  font-size: 14px;
+
+  > li {
+    text-align: center;
+    border-bottom: 1px solid #C6A87B;
+    background-color: rgba(0, 0, 0, .9);
+
+    &:first-child {
+      border-top: 1px solid #C6A87B;
+    }
+
+    &:hover {
+      background-color: rgba(10, 10, 10, .9);
+    }
+
+  }
+
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: 14px;
+  }
+}
+
+
+@media (min-width: @screen-lg) {
+
+  .navbar-nav {
+
+    > li {
+      margin-right: 30px;
+      border-bottom: none;
+      background-color: transparent;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+
+
+      &:hover {
+        background-color: transparent;
+      }
+
+    }
+    > li > a {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
+  .navbar-nav.navbar-user {
+    margin-left: 60px;
+
+    > li > a {
+      padding: 0;
+      padding-top: 55px;
+      padding-bottom: 53px;
+    }
+  }
+}

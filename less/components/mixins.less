@@ -1,0 +1,48 @@
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-8
+  url('@{font-folder}@{font-url}.woff') format('woff'), // for modern browser
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, IOS
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy IOS ;
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+.btn(@bg-color: #9E8463, @bg-color-hover: #77624A, @bg-color-active: @bg-color-hover,  @color: #FFFCDB, @color-hover: #DCBE92) {
+  display: inline-block;
+  padding: 15px 38px 12px 38px;
+  font-family: "RalewayBold", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @color;
+  background-color: @bg-color;
+  transition: all .3s ease-in-out;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid #77624A;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: @color-hover;
+    background-color: @bg-color-hover;
+  }
+
+  &:active {
+      outline: none;
+    color: fade(@color-hover, 55%);
+    background-color: @bg-color-hover;
+  }
+}
+
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
