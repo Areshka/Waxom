@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Waxon</title>
+  </head>
+  <body>
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 18 24" id="icon-cart" xmlns="http://www.w3.org/2000/svg"><path class="acls-1" d="M15 3h-1.5c0-1.657-2.02-3-4.5-3S4.5 1.344 4.5 3H3a3 3 0 0 0-3 3v15a3 3 0 0 0 3 3h12a3 3 0 0 0 2.99-3V6A3 3 0 0 0 15 3zM9 1.5c1.66 0 3 .464 3 1.5H6c0-1.038 1.34-1.5 3-1.5zM16.49 21A1.5 1.5 0 0 1 15 22.5H3A1.5 1.5 0 0 1 1.5 21v-1.5h14.99V21zm0-3H1.5V6A1.5 1.5 0 0 1 3 4.5h1.5V9H6V4.5h6V9h1.5V4.5H15A1.5 1.5 0 0 1 16.49 6v12z"/></symbol><symbol viewBox="0 0 44 44" id="icon-clients" xmlns="http://www.w3.org/2000/svg"><path class="bcls-1" d="M19.937 30.25c5.688 0 10.313-5.63 10.313-12.55S25.625 5.16 19.937 5.16a9.441 9.441 0 0 0-7.394 3.78 14.037 14.037 0 0 0-2.918 8.76c0 6.92 4.625 12.55 10.312 12.55zm0-22.34c4.17 0 7.563 4.39 7.563 9.79s-3.393 9.8-7.563 9.8-7.562-4.39-7.565-9.8 3.393-9.79 7.565-9.79zm8.661 20.96a1.375 1.375 0 1 0 0 2.75 8.541 8.541 0 0 1 8.527 8.53 1.1 1.1 0 0 1-1.1 1.1H3.848a1.1 1.1 0 0 1-1.1-1.1 8.539 8.539 0 0 1 8.524-8.53 1.375 1.375 0 1 0 0-2.75A11.289 11.289 0 0 0 0 40.15 3.856 3.856 0 0 0 3.848 44h32.176a3.857 3.857 0 0 0 3.851-3.85A11.292 11.292 0 0 0 28.6 28.87zM20.943 3.63a6.084 6.084 0 0 1 3.119-.88c4.17 0 7.563 4.4 7.563 9.8a12.42 12.42 0 0 1-.32 2.83 1.379 1.379 0 0 0 1.024 1.65 1.688 1.688 0 0 0 .315.03A1.369 1.369 0 0 0 33.982 16a15.2 15.2 0 0 0 .393-3.45C34.375 5.63 29.75 0 24.062 0a8.936 8.936 0 0 0-4.518 1.26 1.376 1.376 0 0 0 1.399 2.37zM33 23.37a1.375 1.375 0 1 0 0 2.75 8.386 8.386 0 0 1 8.25 8.62 1.068 1.068 0 0 1-.094.45 1.38 1.38 0 0 0 .7 1.82 1.4 1.4 0 0 0 1.816-.7 3.878 3.878 0 0 0 .33-1.57A11.142 11.142 0 0 0 33 23.37z"/></symbol><symbol viewBox="0 0 48 44" id="icon-coffee" xmlns="http://www.w3.org/2000/svg"><path class="ccls-1" d="M46.043 42.75A1.242 1.242 0 0 1 44.809 44H1.234a1.25 1.25 0 0 1 0-2.5h43.575a1.242 1.242 0 0 1 1.234 1.25zM21.769 22.21a1.215 1.215 0 0 0 1.744-.06 1.266 1.266 0 0 0-.06-1.77c-2.116-2-1.663-6.07.155-8.37 2.467-3.12 3.01-8.68-.155-11.67a1.219 1.219 0 0 0-1.744.06 1.266 1.266 0 0 0 .06 1.77c1.9 1.79 1.858 5.82-.087 8.28a10.169 10.169 0 0 0-2.1 5.95 7.571 7.571 0 0 0 2.187 5.81zM48 19.61v2.4a6.205 6.205 0 0 1-6.154 6.24h-2.755a13.513 13.513 0 0 1-12.686 9.05h-6.766A13.579 13.579 0 0 1 6.163 23.64V11.23a1.242 1.242 0 0 1 1.234-1.25h7.915c1.606-2.48 1.535-6.13-.249-7.81a1.266 1.266 0 0 1-.06-1.77 1.219 1.219 0 0 1 1.744-.06c3.164 2.99 2.621 8.55.155 11.67-1.819 2.3-2.272 6.37-.155 8.37a1.266 1.266 0 0 1 .06 1.77 1.219 1.219 0 0 1-1.744.06 7.571 7.571 0 0 1-2.184-5.81 10.44 10.44 0 0 1 .881-3.92H8.63v11.16A11.094 11.094 0 0 0 19.639 34.8h6.766a11.093 11.093 0 0 0 11.008-11.16V12.48h-9.278a1.25 1.25 0 0 1 0-2.5h10.512a1.242 1.242 0 0 1 1.234 1.25v2.15h1.965A6.2 6.2 0 0 1 48 19.61zm-2.468 0a3.711 3.711 0 0 0-3.686-3.73h-1.965v9.87h1.965a3.719 3.719 0 0 0 3.686-3.74v-2.4z"/></symbol><symbol viewBox="0 0 42.875 39.19" id="icon-develop" xmlns="http://www.w3.org/2000/svg"><path class="dcls-1" d="M21.445.02L.008 11.58l21.437 11.56 21.436-11.56zm0 26.85L3.993 17.46.008 19.61l21.437 11.55 21.436-11.55-3.985-2.15zm0 8.02L3.993 25.48.008 27.63l21.437 11.56 21.436-11.56-3.985-2.15z"/></symbol><symbol viewBox="0 0 50.88 35.63" id="icon-folder" xmlns="http://www.w3.org/2000/svg"><path class="ecls-1" d="M8.25 12.91a6.787 6.787 0 0 1 5.74-3.61H40.2V7.64a2.482 2.482 0 0 0-2.46-2.48H26.92V3.72a3.707 3.707 0 0 0-3.68-3.73h-6.29a3.722 3.722 0 0 0-3.69 3.73v1.44H2.45A2.475 2.475 0 0 0-.01 7.64v22.17zm7.47-9.19a1.266 1.266 0 0 1 .36-.88 1.185 1.185 0 0 1 .87-.36h6.29a1.231 1.231 0 0 1 1.23 1.24v1.44h-8.75V3.72zm25.45 29.7a4.319 4.319 0 0 1-3.54 2.22H2.33a1.417 1.417 0 0 1-1.37-2.22L10.45 14a4.333 4.333 0 0 1 3.54-2.22h35.3A1.417 1.417 0 0 1 50.66 14z"/></symbol><symbol viewBox="0 0 54 44" id="icon-launch" xmlns="http://www.w3.org/2000/svg"><path class="fcls-1" d="M52.31 40.61H1.69a1.7 1.7 0 0 0 0 3.39h50.62a1.7 1.7 0 0 0 0-3.39zM28.69 6.77V3.39h3.37a1.7 1.7 0 0 0 0-3.39H21.94a1.7 1.7 0 0 0 0 3.39h3.37s-.01 3.52 0 3.38A27.1 27.1 0 0 0 0 33.84v1.7a1.694 1.694 0 0 0 1.69 1.69h50.62A1.694 1.694 0 0 0 54 35.54v-1.7A27.1 27.1 0 0 0 28.69 6.77zM3.38 33.84a23.62 23.62 0 1 1 47.24 0H3.38z"/></symbol><symbol viewBox="0 0 44 44" id="icon-like" xmlns="http://www.w3.org/2000/svg"><path class="gcls-1" d="M30.25 0c-.42 0-.85.03-1.27.06l-.46.06c-.25.03-.51.07-.76.12-.19.03-.38.07-.56.11-.21.05-.42.11-.63.16s-.39.11-.59.18a5.442 5.442 0 0 0-.52.19 12.305 12.305 0 0 0-1.34.58 2.1 2.1 0 0 0-.26.13c-.23.12-.45.25-.68.39-.12.07-.24.14-.36.22-.22.14-.42.28-.63.43a2.141 2.141 0 0 1-.19.13A13.74 13.74 0 0 0 0 13.75c0 12.44 8 23.7 21.41 30.11a1.313 1.313 0 0 0 1.18 0C36 37.45 44 26.19 44 13.75A13.768 13.768 0 0 0 30.25 0zM22 41.1C9.93 35.11 2.75 24.93 2.75 13.75a10.974 10.974 0 0 1 17.19-9.07 13.728 13.728 0 0 0-3.44 9.07 1.375 1.375 0 0 0 2.75 0 11.007 11.007 0 0 1 3.72-8.23c.21-.19.43-.36.66-.53l.15-.12c.22-.16.44-.31.67-.45.06-.04.13-.08.19-.12.22-.13.45-.25.68-.37l.24-.12c.22-.1.45-.2.67-.29.1-.04.2-.07.31-.11.21-.08.43-.15.64-.21.14-.04.26-.08.4-.11.2-.05.39-.1.59-.14.18-.03.37-.05.55-.08.15-.02.31-.05.47-.07.35-.03.7-.05 1.06-.05a11.007 11.007 0 0 1 11 11c0 11.18-7.18 21.36-19.25 27.35zm8.25-35.6a1.375 1.375 0 1 0 0 2.75 5.51 5.51 0 0 1 5.5 5.5 1.375 1.375 0 0 0 2.75 0 8.258 8.258 0 0 0-8.25-8.25z"/></symbol><symbol viewBox="0 0 24.625 24.62" id="icon-link" xmlns="http://www.w3.org/2000/svg"><path class="hcls-1" d="M22.812 1.77a6.208 6.208 0 0 0-8.743 0L9.348 6.5a7.1 7.1 0 0 1 4.908.37l2.454-2.45a2.447 2.447 0 0 1 3.46 3.46l-3.085 3.09-2.028 2.02a2.438 2.438 0 0 1-3.46 0l-2.641 2.65A6.064 6.064 0 0 0 11.035 17a6.237 6.237 0 0 0 6.153-.9 4.686 4.686 0 0 0 .511-.46l3.187-3.19 1.926-1.93a6.18 6.18 0 0 0 0-8.75zM10.251 17.8l-2.352 2.36a2.447 2.447 0 0 1-3.46-3.46l5.113-5.12a2.457 2.457 0 0 1 3.46 0l2.642-2.64a5.97 5.97 0 0 0-2.079-1.37 6.206 6.206 0 0 0-6.426 1.14 3.111 3.111 0 0 0-.239.23l-5.113 5.11a6.185 6.185 0 0 0 8.744 8.75l4.618-4.67c-2.347.54-2.898.48-4.909-.33z"/></symbol><symbol viewBox="0 0 25.157 24.47" id="icon-lupa" xmlns="http://www.w3.org/2000/svg"><path class="icls-1" d="M10.519 3.89a1.3 1.3 0 1 0 0 2.59 4.156 4.156 0 0 1 3.748 2.31 1.327 1.327 0 0 0 1.758.6 1.284 1.284 0 0 0 .607-1.73 6.756 6.756 0 0 0-6.113-3.77zm14.152 17.8l-4.383-4.32a10.838 10.838 0 0 0 2.068-6.36 11.158 11.158 0 1 0-4.346 8.7l4.335 4.27a1.649 1.649 0 0 0 2.326 0 1.6 1.6 0 0 0 .004-2.29zM2.624 11.01a8.552 8.552 0 0 1 17.1 0 8.4 8.4 0 0 1-3.029 6.42 8.561 8.561 0 0 1-14.067-6.42z"/></symbol><symbol viewBox="0 0 47.594 47.59" id="icon-pencil" xmlns="http://www.w3.org/2000/svg"><path class="jcls-1" d="M47.137 16.59a1.591 1.591 0 0 0-2.248 0L31.042 30.43l-19.467 8.58-3-3 8.576-19.47L30.995 2.7A1.59 1.59 0 1 0 28.747.45L14.479 14.71.002 47.58 32.87 33.11l14.266-14.27a1.592 1.592 0 0 0 .001-2.25zm-20.173 11a1.606 1.606 0 0 0 2.25 0l13.332-13.34a1.591 1.591 0 0 0-2.25-2.25L26.969 25.34a1.593 1.593 0 0 0 0 2.25zm-3.48-3.48a1.606 1.606 0 0 0 2.25 0l13.333-13.34a1.591 1.591 0 0 0-2.25-2.25L23.484 21.85a1.6 1.6 0 0 0 0 2.26zm-3.481-3.49a1.581 1.581 0 0 0 2.25 0L35.586 7.29a1.591 1.591 0 0 0-2.25-2.25L20.003 18.37a1.593 1.593 0 0 0 0 2.25z"/></symbol><symbol viewBox="0 0 69.969 69.97" id="icon-play" xmlns="http://www.w3.org/2000/svg"><path class="kcls-1" d="M29.903 51.79a2.047 2.047 0 0 1-2.06-2.06V20.21a2.062 2.062 0 0 1 3.379-1.59l17.714 14.77a2.053 2.053 0 0 1 0 3.16L31.222 51.31a2.031 2.031 0 0 1-1.319.48zm2.06-27.19v20.73L44.4 34.97zm2.943 45.37A34.793 34.793 0 0 1 17.8 65.5a2.06 2.06 0 1 1 2.021-3.59 30.921 30.921 0 1 0-6.7-5.09 2.059 2.059 0 1 1-2.913 2.91 35.057 35.057 0 1 1 24.698 10.24z"/></symbol><symbol viewBox="0 0 44 44" id="icon-post" xmlns="http://www.w3.org/2000/svg"><path class="lcls-1" d="M28.873 23.37H15.126a1.375 1.375 0 1 0 0 2.75h13.747a1.375 1.375 0 1 0 0-2.75zm2.749-8.24H12.376a1.37 1.37 0 1 0 0 2.74h19.246a1.37 1.37 0 1 0 0-2.74zM22 0C9.853 0 0 8.62 0 19.25a18.431 18.431 0 0 0 8.249 15.01V44l9.635-5.85a25.236 25.236 0 0 0 4.112.35c12.149 0 22-8.62 22-19.25S34.148 0 22 0zm0 35.75a22.075 22.075 0 0 1-4.646-.51l-6.473 3.89.087-6.37c-4.962-2.99-8.214-7.92-8.214-13.51 0-9.11 8.617-16.5 19.246-16.5s19.247 7.39 19.247 16.5S32.629 35.75 22 35.75z"/></symbol><symbol viewBox="0 0 21.969 21.97" id="icon-posts-arrow-left" xmlns="http://www.w3.org/2000/svg"><path class="mcls-1" d="M7.583 10.4l4.772-4.77a.735.735 0 0 1 1.04 1.04l-4.254 4.26 4.254 4.25a.735.735 0 0 1-1.04 1.04l-4.772-4.77a.731.731 0 0 1-.216-.52.759.759 0 0 1 .216-.53zm3.4-10.4A10.98 10.98 0 1 1 0 10.98 10.979 10.979 0 0 1 10.987 0zm0 20.49a9.51 9.51 0 1 0-9.512-9.51 9.526 9.526 0 0 0 9.516 9.51z"/></symbol><symbol viewBox="0 0 21.969 21.97" id="icon-posts-arrow-right" xmlns="http://www.w3.org/2000/svg"><path class="ncls-1" d="M14.386 10.4L9.614 5.63a.735.735 0 0 0-1.04 1.04l4.254 4.26-4.254 4.25a.735.735 0 0 0 1.04 1.04l4.772-4.77a.731.731 0 0 0 .216-.52.759.759 0 0 0-.216-.53zM10.981 0a10.98 10.98 0 1 0 10.988 10.98A10.978 10.978 0 0 0 10.981 0zm0 20.49a9.51 9.51 0 1 1 9.513-9.51 9.526 9.526 0 0 1-9.513 9.51z"/></symbol><symbol viewBox="0 0 24 24" id="icon-search" xmlns="http://www.w3.org/2000/svg"><path class="ocls-1" d="M23.76 22.682l-6.19-6.095a9.807 9.807 0 0 0 2.62-6.658 10.1 10.1 0 1 0-10.1 9.934 10.183 10.183 0 0 0 6.36-2.218l6.21 6.12a.788.788 0 0 0 1.1 0 .763.763 0 0 0 0-1.083zm-13.67-4.348a8.406 8.406 0 1 1 8.54-8.405 8.477 8.477 0 0 1-8.54 8.405z"/></symbol><symbol viewBox="0 0 43.56 43.57" id="icon-setting" xmlns="http://www.w3.org/2000/svg"><path class="pcls-1" d="M43.55 21.79a4.327 4.327 0 0 0-2.61-3.86 4.623 4.623 0 0 1-2.88-6.97A4.161 4.161 0 0 0 32.6 5.5a6.019 6.019 0 0 1-4.23.35 5.937 5.937 0 0 1-2.74-3.24 4.173 4.173 0 0 0-7.73 0 4.634 4.634 0 0 1-6.97 2.89 4.161 4.161 0 0 0-5.46 5.46 4.636 4.636 0 0 1-2.88 6.97 4.159 4.159 0 0 0 0 7.72 4.623 4.623 0 0 1 2.88 6.97 4.161 4.161 0 0 0 5.46 5.46 4.634 4.634 0 0 1 6.97 2.89 4.173 4.173 0 0 0 7.73 0 4.628 4.628 0 0 1 6.97-2.89 4.161 4.161 0 0 0 5.46-5.46 4.623 4.623 0 0 1 2.88-6.97 4.327 4.327 0 0 0 2.61-3.86zm-21.79 7.99a7.985 7.985 0 1 1 7.99-7.98 7.979 7.979 0 0 1-7.99 7.98z"/></symbol><symbol viewBox="0 0 40 72.938" id="icon-slider-left" xmlns="http://www.w3.org/2000/svg"><path class="qcls-1" d="M38.026 72.948L.005 36.469 38.026-.011l1.969 2-35.929 34.48L40 70.946z"/></symbol><symbol viewBox="0 0 40 72.938" id="icon-slider-right" xmlns="http://www.w3.org/2000/svg"><path class="rcls-1" d="M1.97 72.948L40 36.469 1.97-.011l-1.97 2 35.93 34.476L0 70.946z"/></symbol><symbol viewBox="0 0 63.031 55.125" id="logo" xmlns="http://www.w3.org/2000/svg"><path class="scls-1" d="M36.764 10.713H26.256l5.254 9.191zm-11.822.767l-5.254 9.191h10.508zm18.39 9.191l-5.254-9.191-5.254 9.191h10.508zM32.824 22.2l5.254 9.188 5.254-9.188H32.824zm-13.136 0l5.254 9.188 5.254-9.188H19.688zm-6.567 9.952h10.506l-5.253-9.187zm36.778 0l-5.253-9.187-5.252 9.187h10.5zM31.51-.008l-5.254 9.19h10.508zm13.136 42.882l5.253-9.188h-10.5zm-26.272 0l5.253-9.188H13.121zm-11.821.767h10.503l-5.253-9.19zm49.914 0l-5.254-9.19-5.254 9.19h10.508zm-10.511 1.531l5.254 9.187 5.254-9.187H45.956zm-13.135 0l5.254 9.187 5.254-9.187H32.824zm-21.017 9.187l5.253-9.187H6.556zm-11.82.769h10.5L5.23 45.94zm26.269 0h10.508l-5.254-9.188zm13.138 0h10.5l-5.253-9.188zm18.387-9.188l-5.252 9.188h10.5z"/></symbol></svg>
+    <header class="main-header" id="main-header">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                  <svg class="icon logo"><use xlink:href="#logo"></use></svg>
+                  <span>Waxom</span>
+                </a>
+              </div> <!-- .navbar-header -->
+              <div class="collapse navbar-collapse navbar-right"  id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="#main-header">Home</a></li>
+                  <li><a href="#services">About Us</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Shortcodes</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>  <!-- .navbar-nav -->
+                <ul class="nav navbar-nav navbar-right navbar-user">
+                  <li>
+                    <a href="#">
+                      <svg class="icon-cart">
+                        <use xlink:href="#icon-cart"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon-search">
+                        <use xlink:href="#icon-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul> <!-- .navbar-nav -->
+              </div> <!-- .navbar-collapse -->
+            </div> <!-- .container-fluid -->
+          </nav> <!-- .navbar -->
+        </div> <!-- .row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+             <ol class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="1"></li>
+               <li data-target="#myCarousel" data-slide-to="2"></li>
+             </ol>
+
+             <div class="carousel-inner">
+               <div class="item active">
+                 <div class="item__desc">
+                   <p class="item__desc--design">Unique and Modern Design</p>
+                   <p class="item__desc--portfolio">Portfolio PSD Template</p>
+                   <p class="item__desc--info">Nam liber tempor cum soluta nobis eleifend option congue nihil imper-<br>diet doming id quod mazim placerat facer possim assum.</p>
+                   <button type="button" class="btn">Get Started</button>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <div class="item__desc">
+                   <p class="item__desc--design">Unique and Modern Design</p>
+                   <p class="item__desc--portfolio">Portfolio PSD Template</p>
+                   <p class="item__desc--info">Nam liber tempor cum soluta nobis eleifend option congue nihil imper-<br>diet doming id quod mazim placerat facer possim assum.</p>
+                   <button type="button" class="btn">Get Started</button>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <div class="item__desc">
+                   <p class="item__desc--design">Unique and Modern Design</p>
+                   <p class="item__desc--portfolio">Portfolio PSD Template</p>
+                   <p class="item__desc--info">Nam liber tempor cum soluta nobis eleifend option congue nihil imper-<br>diet doming id quod mazim placerat facer possim assum.</p>
+                   <button type="button" class="btn">Get Started</button>
+                 </div>
+               </div>
+             </div> <!-- .carousel-inner -->
+
+             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+               <svg class="icon-slider icon-slider-left">
+                 <use xlink:href="#icon-slider-left"></use>
+               </svg>
+             </a>
+             <a class="right carousel-control" href="#myCarousel" data-slide="next">
+               <svg class="icon-slider icon-slider-right">
+                 <use xlink:href="#icon-slider-right"></use>
+               </svg>
+             </a>
+           </div> <!-- .carousel -->
+          </div> <!-- .col-xs-12 -->
+       </div> <!-- .row -->
+     </div> <!-- .container -->
+    </header> <!-- .main-header -->
+    <main>
+      <section class="services" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3  services__item">
+              <div class="services__img">
+                <svg class="icon-services icon-pencil"><use xlink:href="#icon-pencil"></use></svg>
+              </div>
+              <h2 class="services__header">Web &amp; App Design</h2>
+              <p class="services__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+              <hr>
+            </div> <!-- .services__item -->
+            <div class="col-sm-6 col-md-3  services__item">
+              <div class="services__img">
+                <svg class="icon-services icon-develop"><use xlink:href="#icon-develop"></use></svg>
+              </div>
+              <h2 class="services__header">Development</h2>
+              <p class="services__descr">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <hr>
+            </div> <!-- .services__item -->
+            <div class="col-sm-6 col-md-3  services__item">
+              <div class="services__img">
+                <svg class="icon-services icon-setting"><use xlink:href="#icon-setting"></use></svg>
+              </div>
+              <h2 class="services__header">Customization</h2>
+              <p class="services__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+              <hr>
+            </div> <!-- .services__item -->
+            <div class="col-sm-6 col-md-3  services__item">
+              <div class="services__img">
+                <svg class="icon-services icon-folder"><use xlink:href="#icon-folder"></use></svg>
+              </div>
+              <h2 class="services__header">Marketing</h2>
+              <p class="services__descr">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <hr>
+            </div> <!-- .services__item -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .services -->
+      <section class="waxom-ideas">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+              <h2 class="waxon-ideas__header">Waxom is Realization of your Ideas</h2>
+              <p class="waxon-ideas__descr">
+                Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+              </p>
+            </div>
+            <div id="carousel">
+              <a href="#"><img class="split-left" src="img/browser-center.jpg" id="item-1" /></a>
+              <a href="#"><img class="split-right" src="img/browser-right.jpg" id="item-2" /></a>
+              <a href="#"><img class="split-right" src="img/browser-left.jpg" id="item-3" /></a>
+            </div>
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .waxom-ideas -->
+      <section class="text-box">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12  col-sm-9 text-box__text">
+              <p class="text-box__header"><span>Waxon</span> Multipurpose WordPress Theme</p>
+              <p class="text-box__descr">Don't Forget to Rate thr Template. Thanks so much!</p>
+            </div> <!-- .text-box_text -->
+            <div class="col-xs-12  col-sm-3 text-box__btn">
+              <button type="button" name="button" class="btn">Purchase now</button>
+            </div> <!-- .text-box__btn -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .text-box -->
+      <section class="latest-projects">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-8  col-xs-push-2">
+              <h2 class="latest-projects__header">Our Latest Projects.</h2>
+              <p class="latest-projects__descr">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+            </div>
+            <div class="col-xs-12">
+              <ul class="nav nav-pills nav-centered">
+                <li class="active"><a data-toggle="pill" href="#all">All</a></li>
+                <li><a data-toggle="pill" href="#web-des">Web Design</a></li>
+                <li><a data-toggle="pill" href="#mobile-app">Mobile App</a></li>
+                <li><a data-toggle="pill" href="#illustration">Illustration</a></li>
+                <li><a data-toggle="pill" href="#photography">Photography</a></li>
+              </ul> <!-- .nav-pills -->
+              <div class="tab-content">
+                <div id="all" class="tab-pane fade in active">
+                  <div class="row">
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-1.jpg" alt="Claritas Etiam Processus">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Claritas Etiam Processus</h3>
+                        <p>Mobile App, Twitter</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-2.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Quam Nutamus Farum</h3>
+                        <p>Photography, Holiday</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-3.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Usus Legentis Videntur</h3>
+                        <p>Web Design, Mock-up</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-4.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Claritas Etiam Processus</h3>
+                        <p>Photography, Nature</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-5.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Quam Nutamus Farum</h3>
+                        <p>Web Design, Mock-down</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-6.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Usus Legentis Videntur</h3>
+                        <p>Photography, Holiday</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- #all -->
+                <div id="web-des" class="tab-pane fade">
+                  <div class="row">
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-3.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Usus Legentis Videntur</h3>
+                      <p>Web Design, Mock-up</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-5.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Quam Nutamus Farum</h3>
+                        <p>Web Design, Mock-down</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- #web-desc -->
+                <div id="mobile-app" class="tab-pane fade">
+                  <div class="row">
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-1.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Claritas Etiam Processus</h3>
+                        <p>Mobile App, Twitter</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- #mobile-app -->
+                <div id="illustration" class="tab-pane fade">
+                  <div class="row">
+                  <!--  -->
+                  </div>
+                </div> <!-- #illustration -->
+                <div id="photography" class="tab-pane fade">
+                  <div class="row">
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-2.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Quam Nutamus Farum</h3>
+                        <p>Photography, Holiday</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-4.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Claritas Etiam Processus</h3>
+                        <p>Photography, Nature</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-6  col-lg-4  tab-content__item">
+                      <div class="latest-projects__img">
+                        <div class="increase">
+                          <svg class="increase-icon icon-link">
+                            <use xlink:href="#icon-link"></use>
+                          </svg>
+                          <svg class="increase-icon icon-lupa">
+                            <use xlink:href="#icon-lupa"></use>
+                          </svg>
+                        </div>
+                        <img src="img/project-photo-6.jpg" alt="Quam Nutamus Farum">
+                      </div>
+                      <div class="tab-content__item-info">
+                        <h3>Usus Legentis Videntur</h3>
+                        <p>Photography, Holiday</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- .tab-content -->
+            </div> <!-- .col-xs-12 -->
+            <div class="col-xs-12  increase-btn">
+              <button type="button" name="button" class="btn">Load more</button>
+            </div> <!-- .increase-btn -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .latest-projects -->
+      <section class="video">
+        <video id="VideoPlayer" controls poster="img/video-bg.jpg">
+        	<source id='sourceVideo' src="media/waxom.mp4" type='video/mp4;'>
+        </video> <!-- #VideoPlayer -->
+        <div class="video__description" id="video-description">
+          <svg class="icon-play" id="play"><use xlink:href="#icon-play"></use></svg>
+          <p class="video__header">Waxom Video Presentation</p>
+          <p class="video__descr">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+        </div> <!-- .video__description -->
+      </section> <!-- .video -->
+      <section class="for-mobile">
+        <div class="container  for-mobile__wrapper">
+          <div class="row">
+            <div class="col-xs-12 col-sm-7 col-sm-offset-5">
+              <h2 class="for-mobile__header">Excellent for Mobile Devices.</h2>
+              <p class="for-mobile__descr">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+              <ul>
+                <li>Nam liber tempor cum soluta nobis eleifend option;</li>
+                <li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+                <li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+                <li>Investigationes demonstraverunt lectores</li>
+              </ul>
+            </div> <!-- #col -->
+          </div> <!-- #row -->
+        </div> <!-- #container -->
+      </section> <!-- #for-mobile -->
+      <section class="counters">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6  col-sm-2  col-sm-push-1  counters__item">
+              <svg class="icon-counters  icon-clients" id="play"><use xlink:href="#icon-clients"></use></svg>
+              <p class="counter__reading">3587</p>
+              <p class="counter__name">satisfied clients</p>
+            </div> <!-- .counters__item -->
+            <div class="col-xs-6  col-sm-2  col-sm-push-1  counters__item">
+              <svg class="icon-counters  icon-coffee" id="play"><use xlink:href="#icon-coffee"></use></svg>
+              <p class="counter__reading">207</p>
+              <p class="counter__name">cups of coffee</p>
+            </div> <!-- .counters__item -->
+            <div class="col-xs-6  col-sm-2  col-sm-push-1  counters__item">
+              <svg class="icon-counters  icon-post" id="play"><use xlink:href="#icon-post"></use></svg>
+              <p class="counter__reading">2500</p>
+              <p class="counter__name">blog posts</p>
+            </div> <!-- .counters__item -->
+            <div class="col-xs-6  col-sm-2  col-sm-push-1  counters__item">
+              <svg class="icon-counters  icon-like" id="play"><use xlink:href="#icon-like"></use></svg>
+              <p class="counter__reading">873</p>
+              <p class="counter__name">like</p>
+            </div> <!-- .counters__item -->
+            <div class="col-xs-6  col-xs-push-3  col-sm-2  col-sm-push-1  counters__item">
+              <svg class="icon-counters  icon-launch" id="play"><use xlink:href="#icon-launch"></use></svg>
+              <p class="counter__reading">900</p>
+              <p class="counter__name">we launched</p>
+            </div> <!-- .counters__item -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .counters -->
+      <section class="partners" id="partners">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12  col-sm-6  col-md-3  partners__item">
+              <img class="partner-01" src="img/partner-01.png" alt="partner-01" width="210" height="127">
+            </div> <!-- .partners__item -->
+            <div class="col-xs-12  col-sm-6  col-md-3  partners__item">
+              <img class="partner-02" src="img/partner-02.png" alt="partner-02" width="210" height="210">
+            </div> <!-- .partners__item -->
+            <div class="col-xs-12  col-sm-6  col-md-3  partners__item">
+              <img class="partner-03" src="img/partner-03.png" alt="partner-03" width="210" height="130">
+            </div> <!-- .partners__item -->
+            <div class="col-xs-12  col-sm-6  col-md-3  partners__item">
+              <img class="partner-04" src="img/partner-04.png" alt="partner-04" width="210" height="164">
+            </div> <!-- .partners__item -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </section> <!-- .partners -->
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row  main-footer__content">
+          <div class="col-xs-12  col-sm-6  col-md-3  main-footer__item  about-waxom">
+            <h2 class="main-footer__item-header  about-waxom__header">
+              <svg class="icon logo"><use xlink:href="#logo"></use></svg>
+              <span>Waxom</span>
+            </h2>
+            <p class="about-waxom__info">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+            </p>
+            <a class="about-waxom__linkmore" href="#">Read more<span class="glyphicon glyphicon-play"></span></a>
+          </div> <!-- .about-waxom -->
+          <div class="col-xs-12  col-sm-6  col-md-3  main-footer__item  posts">
+            <h2 class="main-footer__item-header">Resent Posts</h2>
+            <ul>
+              <li>
+                <time datetime="2015-09-08">September 08, 2015</time>
+                <p class="posts__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+              </li>
+              <li>
+                <time datetime="2015-09-08">September 08, 2015</time>
+                <p class="posts__content">Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+              </li>
+              <li>
+                <time datetime="2015-09-08">September 08, 2015</time>
+                <p class="posts__content">Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</p>
+              </li>
+            </ul>
+          </div> <!-- .posts -->
+          <div class="col-xs-12  col-sm-6  col-md-3  main-footer__item  twitter">
+            <h2 class="main-footer__item-header">Our Twitter</h2>
+            <ul>
+              <li>
+                <p class="twitter__content"><span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming</p>
+                <p class="twitter__time">3 mins ago</p>
+              </li>
+              <li>
+                <p class="twitter__content">Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</p>
+                <p class="twitter__time">5 hours ago</p>
+              </li>
+              <li>
+                <p class="twitter__content">Soluta nobis option <span>bit.ly/1Hniso7</span></p>
+                <p class="twitter__time">20 days ago</p>
+              </li>
+            </ul>
+          </div> <!-- .twitter -->
+          <div class="col-xs-12  col-sm-6  col-md-3  main-footer__item  widget">
+            <h2 class="main-footer__item-header">Dribbble Widget</h2>
+            <div class="row">
+              <div class="col-xs-6  widget__item">
+                <img src="img/drible-widget-1.jpg" alt="drible-widget-1" width="130" height="98">
+              </div> <!-- .widget__item -->
+              <div class="col-xs-6  widget__item">
+                <img src="img/drible-widget-2.jpg" alt="drible-widget-2" width="130" height="98">
+              </div> <!-- .widget__item -->
+              <div class="col-xs-6  widget__item">
+                <img src="img/drible-widget-3.jpg" alt="drible-widget-3" width="130" height="98">
+              </div> <!-- .widget__item -->
+              <div class="col-xs-6  widget__item">
+                <img src="img/drible-widget-4.jpg" alt="drible-widget-4" width="130" height="98">
+              </div> <!-- .widget__item -->
+            </div> <!-- .row -->
+          </div> <!-- .widget -->
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12  col-sm-6  copyright__left">
+              <ul>
+                <li><a href="#">Copyright © 2015 <span>Waxom</span></a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div> <!-- .copyright__left -->
+            <div class="col-xs-12  col-sm-6  copyright__right">
+              <ul>
+                <li><a href="#">Designed by <span>ThemeFire</span></a></li>
+                <li><a href="#">Only on <span>Envato Market</span></a></li>
+              </ul>
+            </div> <!-- .copyright__right -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </div> <!-- .copyright -->
+    </footer> <!-- .main-footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waterwheelCarousel.min.js"></script>
+    <!-- <script src="js/jquery-ui.min.js"></script>     -->
+    <script src="js/main.min.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function () {
+       var carousel = $("#carousel").waterwheelCarousel({
+         flankingItems: 1,
+         separation: 250,
+         sizeMultiplier: 0.8,
+        //  horizonOffset: -72,
+         speed: 400,
+         movingToCenter: function ($item) {
+           $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+         },
+         movedToCenter: function ($item) {
+           $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+         },
+         movingFromCenter: function ($item) {
+           $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+         },
+         movedFromCenter: function ($item) {
+           $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+         },
+         clickedCenter: function ($item) {
+           $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+         }
+       });
+
+       $('#prev').bind('click', function () {
+         carousel.prev();
+         return false
+       });
+
+       $('#next').bind('click', function () {
+         carousel.next();
+         return false;
+       });
+
+       $('#reload').bind('click', function () {
+         newOptions = eval("(" + $('#newoptions').val() + ")");
+         carousel.reload(newOptions);
+         return false;
+       });
+
+     });
+   </script>
+
+  </body>
+</html>
